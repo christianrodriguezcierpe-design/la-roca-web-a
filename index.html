@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Roca · Cocina frente al mar en El Quisco</title>
+  <meta name="description" content="Restaurante La Roca en El Quisco: pescados, mariscos y sabores peruano-chilenos con vista panorámica al mar. Terraza, buen café, cócteles y música en vivo. 4,5★ en Google." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="restaurant" />
+  <meta property="og:title" content="La Roca · Cocina frente al mar en El Quisco" />
+  <meta property="og:description" content="Pescados, mariscos y sabores peruano-chilenos con vista panorámica al mar, en El Quisco." />
+  <meta property="og:image" content="img/comedor-vista-mar.webp" />
+  <meta property="og:locale" content="es_CL" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Karla:wght@300;400;500;600;700&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Restaurante La Roca",
+    "servesCuisine": ["Peruana", "Chilena", "Pescados y mariscos"],
+    "priceRange": "$$",
+    "image": "img/comedor-vista-mar.webp",
+    "telephone": "+56942724548",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. Isidoro Dubournais N°421, Loc F",
+      "addressLocality": "El Quisco",
+      "addressRegion": "Valparaíso",
+      "addressCountry": "CL"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.5",
+      "reviewCount": "179"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "12:30", "closes": "18:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "12:30", "closes": "20:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday"], "opens": "12:30", "closes": "03:00" }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <!-- ===== NAV ===== -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#inicio" class="nav__logo" aria-label="La Roca, inicio">
+        La&nbsp;Roca
+        <span class="nav__logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 20" width="40" height="20"><path d="M2 12 C 10 4, 16 4, 22 10 C 27 15, 33 15, 38 8 L 32 8 M 38 8 L 36 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+      </a>
+
+      <nav class="nav__links" aria-label="Navegación principal">
+        <a href="#la-roca">La Roca</a>
+        <a href="#platos">Platos</a>
+        <a href="#galeria">Galería</a>
+        <a href="#opiniones">Opiniones</a>
+        <a href="#visitanos">Visítanos</a>
+      </nav>
+
+      <a class="btn btn--solid nav__cta" href="https://wa.me/56942724548?text=Hola%20La%20Roca,%20quisiera%20hacer%20una%20reserva" target="_blank" rel="noopener">Reservar</a>
+
+      <button class="nav__burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile overlay menu -->
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <nav aria-label="Navegación móvil">
+      <a href="#la-roca">La Roca</a>
+      <a href="#platos">Platos</a>
+      <a href="#galeria">Galería</a>
+      <a href="#opiniones">Opiniones</a>
+      <a href="#visitanos">Visítanos</a>
+      <a class="btn btn--solid" href="https://wa.me/56942724548?text=Hola%20La%20Roca,%20quisiera%20hacer%20una%20reserva" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+    </nav>
+  </div>
+
+  <main id="main">
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="inicio">
+      <div class="hero__grid">
+        <div class="hero__text">
+          <p class="eyebrow reveal">El Quisco · Litoral de Valparaíso</p>
+          <h1 class="hero__title reveal">
+            Cocina
+            <span class="hero__handwrite">
+              <span class="script">frente al mar</span>
+              <svg class="hw-underline" viewBox="0 0 300 30" preserveAspectRatio="none" aria-hidden="true"><path d="M4 18 C 60 26, 120 8, 180 16 C 230 22, 270 12, 296 18" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>
+            </span>
+          </h1>
+          <p class="hero__sub reveal">Pescados, mariscos y sabores peruano-chilenos, servidos con vista panorámica al Pacífico. Un león dormido sobre las rocas de El Quisco.</p>
+          <div class="hero__actions reveal">
+            <a class="btn btn--solid btn--lg" href="https://wa.me/56942724548?text=Hola%20La%20Roca,%20quisiera%20hacer%20una%20reserva" target="_blank" rel="noopener">
+              <svg class="ico" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M.06 24l1.68-6.13A11.8 11.8 0 0 1 .12 11.9C.12 5.35 5.47.06 12.04.06a11.9 11.9 0 0 1 8.42 3.48 11.7 11.7 0 0 1 3.48 8.38c0 6.55-5.35 11.85-11.92 11.85a12 12 0 0 1-5.71-1.45L.06 24zM6.6 20.13l.36.21a9.9 9.9 0 0 0 5.06 1.38h.01c5.46 0 9.9-4.4 9.9-9.82a9.7 9.7 0 0 0-2.9-6.95 9.8 9.8 0 0 0-6.99-2.88c-5.46 0-9.9 4.4-9.9 9.82 0 1.86.52 3.68 1.51 5.25l.24.38-1 3.63 3.71-.97zM17.5 14.5c-.07-.12-.27-.2-.56-.34s-1.75-.86-2.02-.96-.47-.14-.66.14-.76.95-.93 1.15-.34.21-.63.07a8.1 8.1 0 0 1-2.38-1.46 8.9 8.9 0 0 1-1.65-2.04c-.17-.29 0-.44.13-.59.13-.13.29-.34.43-.5.14-.17.19-.29.29-.48.1-.2.05-.36-.02-.5s-.66-1.58-.9-2.17c-.24-.57-.48-.49-.66-.5l-.56-.01c-.2 0-.5.07-.77.36s-1 1-1 2.43 1.03 2.82 1.17 3.02c.14.19 2.02 3.08 4.9 4.32.68.3 1.22.47 1.63.6.69.22 1.31.19 1.8.11.55-.08 1.75-.71 2-1.4.24-.69.24-1.28.17-1.4z"/></svg>
+              Reservar por WhatsApp
+            </a>
+            <a class="link-underline btn--lg-link" href="#platos">Ver los platos</a>
+          </div>
+
+          <div class="hero__rating reveal">
+            <span class="stars" aria-hidden="true">★★★★<span class="stars__half">★</span></span>
+            <strong>4,5</strong>
+            <span>· 179 reseñas en Google</span>
+          </div>
+        </div>
+
+        <figure class="hero__photo reveal">
+          <img src="img/comedor-vista-mar.webp" width="789" height="711" alt="Comedor de La Roca con grandes ventanales y vista al mar de El Quisco" fetchpriority="high" />
+          <figcaption class="photo-note">
+            <span class="script">nuestra terraza ~</span>
+          </figcaption>
+          <svg class="hero__arrow" viewBox="0 0 80 80" aria-hidden="true"><path d="M8 8 C 30 20, 45 40, 42 66" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M42 66 L 34 54 M42 66 L 54 60" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== MARQUEE 1: PLATOS ===== -->
+    <section class="marquee" aria-label="Galería de platos" aria-hidden="true">
+      <div class="marquee__track" id="marquee1">
+        <!-- filled by JS-duplicated markup; base set below -->
+        <figure class="marquee__item"><img src="img/plato-ceviche.webp" width="1000" height="776" loading="lazy" alt="Ceviche mixto" /></figure>
+        <figure class="marquee__item"><img src="img/plato-lomo-saltado.webp" width="1000" height="906" loading="lazy" alt="Lomo saltado" /></figure>
+        <figure class="marquee__item"><img src="img/plato-machas-parmesana.webp" width="977" height="494" loading="lazy" alt="Machas a la parmesana" /></figure>
+        <figure class="marquee__item"><img src="img/plato-chaufa.webp" width="654" height="899" loading="lazy" alt="Arroz chaufa" /></figure>
+        <figure class="marquee__item"><img src="img/plato-mar-y-tierra.webp" width="1000" height="722" loading="lazy" alt="Mar y tierra" /></figure>
+        <figure class="marquee__item"><img src="img/plato-pescado-plancha.webp" width="1000" height="697" loading="lazy" alt="Pescado a la plancha" /></figure>
+        <figure class="marquee__item"><img src="img/plato-pastel-jaiba.webp" width="761" height="923" loading="lazy" alt="Pastel de jaiba" /></figure>
+        <figure class="marquee__item"><img src="img/plato-tartar.webp" width="1200" height="460" loading="lazy" alt="Tártaro de la casa" /></figure>
+      </div>
+    </section>
+
+    <!-- ===== LA ROCA / NOSOTROS ===== -->
+    <section class="story" id="la-roca">
+      <div class="story__grid">
+        <figure class="story__photo reveal">
+          <img src="img/interior-escalera.webp" width="1075" height="790" loading="lazy" alt="Interior de La Roca con escalera de caracol de madera y acero" />
+        </figure>
+        <div class="story__text reveal">
+          <p class="eyebrow">Nuestra casa</p>
+          <h2>Un mirador sobre el Pacífico, con alma de puerto</h2>
+          <p>La Roca nació frente al mar de El Quisco: dos pisos de madera, concreto y grandes ventanales donde la vista es parte del menú. Arriba, la terraza recibe el sol y la brisa; abajo, un comedor cálido y acogedor.</p>
+          <p>Cocinamos pescados y mariscos frescos con la sazón del Perú y el corazón de Chile. Buen café, cócteles preparados con cariño y, cuando cae la tarde, música en vivo.</p>
+          <ul class="chips" aria-label="Lo que ofrecemos">
+            <li>Terraza con vista al mar</li>
+            <li>Música en vivo</li>
+            <li>Buen café</li>
+            <li>Cócteles de autor</li>
+            <li>Pet friendly</li>
+            <li>Estacionamiento gratuito</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PLATOS DESTACADOS ===== -->
+    <section class="dishes" id="platos">
+      <header class="section-head">
+        <p class="eyebrow reveal">De nuestra cocina</p>
+        <h2 class="reveal">Platos que vale la pena el viaje <span class="script script--accent">¡los favoritos!</span></h2>
+        <p class="section-head__sub reveal">Una selección de la carta. El menú completo te espera en el local.</p>
+      </header>
+
+      <div class="dishes__grid">
+        <article class="dish reveal">
+          <div class="dish__img"><img src="img/plato-ceviche.webp" width="1000" height="776" loading="lazy" alt="Ceviche mixto con cancha, choclo y camote" /></div>
+          <h3>Ceviche mixto</h3>
+          <p>Pescado y mariscos frescos en leche de tigre, con cebolla morada, cancha, choclo y camote.</p>
+        </article>
+
+        <article class="dish reveal">
+          <div class="dish__img"><img src="img/plato-lomo-saltado.webp" width="1000" height="906" loading="lazy" alt="Lomo saltado sobre tallarines" /></div>
+          <h3>Lomo saltado</h3>
+          <p>Trozos de res salteados al wok con su punto justo, jugosos, sobre una cama de tallarín.</p>
+        </article>
+
+        <article class="dish reveal">
+          <div class="dish__img"><img src="img/plato-machas-parmesana.webp" width="977" height="494" loading="lazy" alt="Machas a la parmesana gratinadas con limón" /></div>
+          <h3>Machas a la parmesana</h3>
+          <p>Gratinadas al horno con queso y un toque de limón. Un clásico del litoral, bien servido.</p>
+        </article>
+
+        <article class="dish reveal">
+          <div class="dish__img"><img src="img/plato-chaufa.webp" width="654" height="899" loading="lazy" alt="Arroz chaufa con verduras" /></div>
+          <h3>Arroz chaufa</h3>
+          <p>Arroz salteado al estilo nikkei, con verduras crocantes y el wok bien caliente.</p>
+        </article>
+
+        <article class="dish reveal">
+          <div class="dish__img"><img src="img/plato-pescado-plancha.webp" width="1000" height="697" loading="lazy" alt="Pescado del día a la plancha con papas fritas" /></div>
+          <h3>Pescado del día</h3>
+          <p>A la plancha, fresco del día, con hierbas y guarnición. Simple y perfecto frente al mar.</p>
+        </article>
+
+        <article class="dish reveal">
+          <div class="dish__img"><img src="img/plato-pastel-jaiba.webp" width="761" height="923" loading="lazy" alt="Pastel de jaiba gratinado" /></div>
+          <h3>Pastel de jaiba</h3>
+          <p>Cremoso y gratinado en su cazuela, con toda la intensidad del mar chileno.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== MARQUEE 2: AMBIENTE ===== -->
+    <section class="marquee marquee--reverse" aria-label="Galería del local" aria-hidden="true">
+      <div class="marquee__track" id="marquee2">
+        <figure class="marquee__item"><img src="img/vista-terraza.webp" width="740" height="914" loading="lazy" alt="Vista al mar desde la terraza" /></figure>
+        <figure class="marquee__item"><img src="img/mesa-terraza-vista.webp" width="763" height="837" loading="lazy" alt="Mesa en la terraza con vista" /></figure>
+        <figure class="marquee__item"><img src="img/fachada.webp" width="1173" height="646" loading="lazy" alt="Fachada del restaurante La Roca" /></figure>
+        <figure class="marquee__item"><img src="img/postre-cumpleanos.webp" width="711" height="687" loading="lazy" alt="Postre de cumpleaños" /></figure>
+        <figure class="marquee__item"><img src="img/plato-pescado-papas.webp" width="1000" height="677" loading="lazy" alt="Pescado con papas rústicas" /></figure>
+        <figure class="marquee__item"><img src="img/postres-variados.webp" width="634" height="803" loading="lazy" alt="Variedad de postres y jugos naturales" /></figure>
+        <figure class="marquee__item"><img src="img/plato-pollo-relleno.webp" width="754" height="928" loading="lazy" alt="Pollo relleno con arroz" /></figure>
+      </div>
+    </section>
+
+    <!-- ===== GALERÍA ===== -->
+    <section class="gallery" id="galeria">
+      <header class="section-head">
+        <p class="eyebrow reveal">El lugar</p>
+        <h2 class="reveal">Un rincón para quedarse</h2>
+      </header>
+      <div class="gallery__grid" id="gallery-grid">
+        <figure class="gallery__item gallery__item--tall reveal"><img src="img/comedor-vista-mar.webp" width="789" height="711" loading="lazy" alt="Comedor con ventanales y vista al mar" /></figure>
+        <figure class="gallery__item reveal"><img src="img/vista-terraza.webp" width="740" height="914" loading="lazy" alt="Vista al mar desde la terraza al atardecer" /></figure>
+        <figure class="gallery__item gallery__item--wide reveal"><img src="img/interior-escalera.webp" width="1075" height="790" loading="lazy" alt="Escalera de caracol de madera en el interior" /></figure>
+        <figure class="gallery__item reveal"><img src="img/mesa-terraza-vista.webp" width="763" height="837" loading="lazy" alt="Mesa servida en la terraza con vista panorámica" /></figure>
+        <figure class="gallery__item gallery__item--wide reveal"><img src="img/fachada.webp" width="1173" height="646" loading="lazy" alt="Fachada de madera y vidrio del restaurante" /></figure>
+        <figure class="gallery__item reveal"><img src="img/plato-mar-y-tierra.webp" width="1000" height="722" loading="lazy" alt="Plato mar y tierra con camarones y carne" /></figure>
+      </div>
+    </section>
+
+    <!-- ===== OPINIONES ===== -->
+    <section class="reviews" id="opiniones">
+      <header class="section-head">
+        <p class="eyebrow reveal">Lo que dicen</p>
+        <h2 class="reveal">
+          <span class="reviews__score"><span class="circle-doodle"><svg viewBox="0 0 160 90" aria-hidden="true"><path d="M80 8 C 20 8, 8 45, 40 72 C 80 100, 150 78, 152 42 C 153 14, 120 6, 70 12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg><strong>4,5★</strong></span></span>
+          en 179 reseñas de Google
+        </h2>
+      </header>
+
+      <div class="reviews__grid">
+        <blockquote class="review-card reveal">
+          <p>"Los pescados y mariscos estaban frescos, las porciones generosas y la atención muy amable. Un lugar muy recomendable para disfrutar buena comida frente al mar."</p>
+          <cite>Reseña de Google · hace 3 meses</cite>
+        </blockquote>
+        <blockquote class="review-card reveal">
+          <p>"Es un león dormido: tiene una vista increíble y privilegiada, la comida es de primer nivel y la atención de 5 estrellas. Un imperdible del litoral."</p>
+          <cite>Javiera · hace un año</cite>
+        </blockquote>
+        <blockquote class="review-card reveal">
+          <p>"Excelente lugar, precioso, amplio, buena atención, tragos hechos con cariño, ambiente y rica comida. Nos encantó, volveremos."</p>
+          <cite>Reseña de Google · hace 5 meses</cite>
+        </blockquote>
+        <blockquote class="review-card reveal">
+          <p>"Muy buena experiencia, vista al mar. Precios accesibles para la calidad del lugar. El lomo saltado, contundente."</p>
+          <cite>Reseña de Google · hace un mes</cite>
+        </blockquote>
+      </div>
+
+      <aside class="events reveal">
+        <div class="events__text">
+          <p class="script script--accent">para celebrar ~</p>
+          <h3>Eventos y celebraciones</h3>
+          <p>Graduaciones, cumpleaños, matrimonios. Recibimos grupos grandes —hasta más de 140 personas— con menús a medida y todo el equipo pendiente de que salga perfecto.</p>
+          <a class="btn btn--outline" href="https://wa.me/56942724548?text=Hola%20La%20Roca,%20quisiera%20cotizar%20un%20evento" target="_blank" rel="noopener">Cotizar un evento</a>
+        </div>
+      </aside>
+    </section>
+
+    <!-- ===== VISÍTANOS ===== -->
+    <section class="visit" id="visitanos">
+      <header class="section-head">
+        <p class="eyebrow reveal">Visítanos</p>
+        <h2 class="reveal">Te esperamos frente al mar</h2>
+      </header>
+
+      <div class="visit__grid">
+        <div class="visit__info reveal">
+          <div class="info-block">
+            <h3>Horarios</h3>
+            <table class="hours">
+              <tbody>
+                <tr><th scope="row">Domingo</th><td>12:30 – 18:00</td></tr>
+                <tr><th scope="row">Lunes</th><td>12:30 – 20:00</td></tr>
+                <tr><th scope="row">Martes</th><td>12:30 – 20:00</td></tr>
+                <tr><th scope="row">Miércoles</th><td>12:30 – 20:00</td></tr>
+                <tr><th scope="row">Jueves</th><td>12:30 – 20:00</td></tr>
+                <tr class="hours--late"><th scope="row">Viernes</th><td>12:30 – 03:00</td></tr>
+                <tr class="hours--late"><th scope="row">Sábado</th><td>12:30 – 03:00</td></tr>
+              </tbody>
+            </table>
+            <p class="hours__note"><span class="script">viernes y sábado</span> la fiesta sigue hasta las 3 de la madrugada.</p>
+          </div>
+
+          <div class="info-block">
+            <h3>Dónde estamos</h3>
+            <p class="address">Av. Isidoro Dubournais N°421, Loc F<br />El Quisco, Región de Valparaíso</p>
+            <div class="info-actions">
+              <a class="btn btn--solid" href="https://wa.me/56942724548?text=Hola%20La%20Roca,%20quisiera%20hacer%20una%20reserva" target="_blank" rel="noopener">WhatsApp</a>
+              <a class="btn btn--outline" href="tel:+56942724548">+56 9 4272 4548</a>
+            </div>
+          </div>
+
+          <ul class="chips chips--muted" aria-label="Servicios">
+            <li>Reservas</li>
+            <li>Accesible en silla de ruedas</li>
+            <li>Estacionamiento gratuito</li>
+            <li>Menú para niños</li>
+            <li>Pet friendly</li>
+            <li>Tarjetas y pago NFC</li>
+            <li>Espacio LGBTQ+ friendly</li>
+          </ul>
+        </div>
+
+        <div class="visit__map reveal">
+          <iframe
+            title="Mapa de La Roca en El Quisco"
+            src="https://www.google.com/maps?q=Av.%20Isidoro%20Dubournais%20421,%20El%20Quisco,%20Valpara%C3%ADso&output=embed"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <span class="footer__logo">La Roca</span>
+        <p class="script">Te esperamos frente al mar ~</p>
+      </div>
+      <div class="footer__cols">
+        <div>
+          <h4>Contacto</h4>
+          <a class="social-link" href="https://wa.me/56942724548?text=Hola%20La%20Roca" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+            <svg class="social-ico" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M.06 24l1.68-6.13A11.8 11.8 0 0 1 .12 11.9C.12 5.35 5.47.06 12.04.06a11.9 11.9 0 0 1 8.42 3.48 11.7 11.7 0 0 1 3.48 8.38c0 6.55-5.35 11.85-11.92 11.85a12 12 0 0 1-5.71-1.45L.06 24zM6.6 20.13l.36.21a9.9 9.9 0 0 0 5.06 1.38h.01c5.46 0 9.9-4.4 9.9-9.82a9.7 9.7 0 0 0-2.9-6.95 9.8 9.8 0 0 0-6.99-2.88c-5.46 0-9.9 4.4-9.9 9.82 0 1.86.52 3.68 1.51 5.25l.24.38-1 3.63 3.71-.97zM17.5 14.5c-.07-.12-.27-.2-.56-.34s-1.75-.86-2.02-.96-.47-.14-.66.14-.76.95-.93 1.15-.34.21-.63.07a8.1 8.1 0 0 1-2.38-1.46 8.9 8.9 0 0 1-1.65-2.04c-.17-.29 0-.44.13-.59.13-.13.29-.34.43-.5.14-.17.19-.29.29-.48.1-.2.05-.36-.02-.5s-.66-1.58-.9-2.17c-.24-.57-.48-.49-.66-.5l-.56-.01c-.2 0-.5.07-.77.36s-1 1-1 2.43 1.03 2.82 1.17 3.02c.14.19 2.02 3.08 4.9 4.32.68.3 1.22.47 1.63.6.69.22 1.31.19 1.8.11.55-.08 1.75-.71 2-1.4.24-.69.24-1.28.17-1.4z"/></svg>
+            WhatsApp
+          </a>
+          <a href="tel:+56942724548">+56 9 4272 4548</a>
+        </div>
+        <div>
+          <h4>Ubicación</h4>
+          <p>Av. Isidoro Dubournais 421,<br />Loc F, El Quisco</p>
+        </div>
+        <div>
+          <h4>Síguenos</h4>
+          <a class="social-link" href="https://www.instagram.com/laroca.elquisco/" target="_blank" rel="noopener" aria-label="Instagram de La Roca">
+            <svg class="social-ico" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M7 2.75h10A4.25 4.25 0 0 1 21.25 7v10A4.25 4.25 0 0 1 17 21.25H7A4.25 4.25 0 0 1 2.75 17V7A4.25 4.25 0 0 1 7 2.75Z"/><circle cx="12" cy="12" r="3.6" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/></svg>
+            @laroca.elquisco
+          </a>
+        </div>
+      </div>
+    </div>
+    <p class="footer__copy">© <span id="year"></span> Restaurante La Roca · El Quisco, Chile</p>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a class="fab-wa" href="https://wa.me/56942724548?text=Hola%20La%20Roca,%20quisiera%20hacer%20una%20reserva" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+    <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path fill="currentColor" d="M.06 24l1.68-6.13A11.8 11.8 0 0 1 .12 11.9C.12 5.35 5.47.06 12.04.06a11.9 11.9 0 0 1 8.42 3.48 11.7 11.7 0 0 1 3.48 8.38c0 6.55-5.35 11.85-11.92 11.85a12 12 0 0 1-5.71-1.45L.06 24zM6.6 20.13l.36.21a9.9 9.9 0 0 0 5.06 1.38h.01c5.46 0 9.9-4.4 9.9-9.82a9.7 9.7 0 0 0-2.9-6.95 9.8 9.8 0 0 0-6.99-2.88c-5.46 0-9.9 4.4-9.9 9.82 0 1.86.52 3.68 1.51 5.25l.24.38-1 3.63 3.71-.97zM17.5 14.5c-.07-.12-.27-.2-.56-.34s-1.75-.86-2.02-.96-.47-.14-.66.14-.76.95-.93 1.15-.34.21-.63.07a8.1 8.1 0 0 1-2.38-1.46 8.9 8.9 0 0 1-1.65-2.04c-.17-.29 0-.44.13-.59.13-.13.29-.34.43-.5.14-.17.19-.29.29-.48.1-.2.05-.36-.02-.5s-.66-1.58-.9-2.17c-.24-.57-.48-.49-.66-.5l-.56-.01c-.2 0-.5.07-.77.36s-1 1-1 2.43 1.03 2.82 1.17 3.02c.14.19 2.02 3.08 4.9 4.32.68.3 1.22.47 1.63.6.69.22 1.31.19 1.8.11.55-.08 1.75-.71 2-1.4.24-.69.24-1.28.17-1.4z"/></svg>
+  </a>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lightbox__close" id="lightbox-close" aria-label="Cerrar">
+      <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <img id="lightbox-img" src="" alt="" />
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
