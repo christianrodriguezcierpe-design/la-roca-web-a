@@ -118,9 +118,77 @@
   lightbox.addEventListener("click", function (e) {
     if (e.target === lightbox) closeLightbox();
   });
+
+  /* ---- Reservation modal (form -> WhatsApp) ---- */
+  var resv = document.getElementById("resv");
+  var resvForm = document.getElementById("resv-form");
+  var resvFecha = document.getElementById("resv-fecha");
+  var resvLastFocused = null;
+
+  function openResv() {
+    if (!resv) return;
+    resvLastFocused = document.activeElement;
+    // set date min = today, default to today if empty
+    if (resvFecha) {
+      var today = new Date();
+      var iso = new Date(today.getTime() - today.getTimezoneOffset() * 60000)
+        .toISOString().slice(0, 10);
+      resvFecha.min = iso;
+      if (!resvFecha.value) resvFecha.value = iso;
+    }
+    resv.hidden = false;
+    document.body.style.overflow = "hidden";
+    if (resvFecha) resvFecha.focus();
+    else resv.querySelector("input, select, button").focus();
+  }
+  function closeResv() {
+    if (!resv) return;
+    resv.hidden = true;
+    document.body.style.overflow = "";
+    if (resvLastFocused) resvLastFocused.focus();
+  }
+
+  if (resv) {
+    // Intercept any .js-reserva trigger (keeps WhatsApp href as no-JS fallback)
+    document.querySelectorAll(".js-reserva").forEach(function (el) {
+      el.addEventListener("click", function (e) {
+        e.preventDefault();
+        if (!mobileMenu.hidden) closeMenu();
+        openResv();
+      });
+    });
+    resv.querySelectorAll("[data-resv-close]").forEach(function (el) {
+      el.addEventListener("click", closeResv);
+    });
+    resvForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var personas = document.getElementById("resv-personas").value;
+      var nombre = (document.getElementById("resv-nombre").value || "").trim();
+      var comentario = (document.getElementById("resv-comentario").value || "").trim();
+      var msg;
+      if (personas === "mas") {
+        msg = "Hola La Roca, quisiera cotizar un evento:\n" +
+          "- Fecha: " + resvFecha.value + "\n" +
+          "- Hora: " + document.getElementById("resv-hora").value + "\n" +
+          "- Personas: más de 12\n" +
+          "- Nombre: " + nombre;
+      } else {
+        msg = "Hola La Roca, quisiera reservar una mesa:\n" +
+          "- Fecha: " + resvFecha.value + "\n" +
+          "- Hora: " + document.getElementById("resv-hora").value + "\n" +
+          "- Personas: " + personas + "\n" +
+          "- Nombre: " + nombre;
+      }
+      if (comentario) msg += "\n- Comentario: " + comentario;
+      window.open("https://wa.me/56942724548?text=" + encodeURIComponent(msg), "_blank");
+      closeResv();
+    });
+  }
+
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape") {
-      if (!lightbox.hidden) closeLightbox();
+      if (resv && !resv.hidden) closeResv();
+      else if (!lightbox.hidden) closeLightbox();
       else if (!mobileMenu.hidden) closeMenu();
     }
   });

@@ -763,3 +763,285 @@ a { color: inherit; }
   .btn, .dish__img img, .gallery__item img, .fab-wa, .hero__photo img { transition: none; }
   * { scroll-behavior: auto; }
 }
+
+/* ===========================================================
+   Añadidos demo: Carta · Instagram · Reserva · FAQ · Delivery
+   =========================================================== */
+
+/* ---------- Carta / Menú ---------- */
+.carta {
+  padding: clamp(4rem, 9vw, 7rem) 0;
+}
+.carta__grid {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(2rem, 5vw, 4rem) clamp(2.5rem, 6vw, 5rem);
+}
+.carta__cat-title {
+  font-size: 1.5rem;
+  color: var(--ocean);
+  padding-bottom: 0.6rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--border);
+}
+.carta__list { list-style: none; margin: 0; padding: 0; }
+.carta__item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: baseline;
+  column-gap: 0.5rem;
+  margin-bottom: 1.1rem;
+}
+.carta__name { font-weight: 700; color: var(--ink); }
+.carta__star {
+  font-family: var(--font-script);
+  font-style: normal;
+  font-size: 1.15rem;
+  color: var(--terracotta);
+  margin-left: 0.4rem;
+}
+.carta__dots {
+  border-bottom: 1px dotted var(--border);
+  transform: translateY(-0.28em);
+  min-width: 1rem;
+}
+.carta__price { font-weight: 700; color: var(--terracotta-deep); white-space: nowrap; }
+.carta__desc {
+  grid-column: 1 / -1;
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+  margin-top: 0.15rem;
+}
+.carta__foot {
+  text-align: center;
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+  margin: clamp(2rem, 5vw, 3rem) auto 0;
+  max-width: 50ch;
+  padding: 0 var(--gutter);
+}
+
+/* ---------- Instagram ---------- */
+.ig {
+  padding: clamp(4rem, 9vw, 7rem) 0;
+  background: var(--paper-2);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.ig__handle { color: var(--ocean); font-weight: 700; text-decoration: none; }
+.ig__handle:hover { text-decoration: underline; }
+.ig-grid {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(6px, 1.4vw, 14px);
+}
+.ig-cell {
+  position: relative;
+  display: block;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+.ig-cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s var(--ease);
+}
+.ig-cell:hover img { transform: scale(1.06); }
+.ig-cell__ov {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: rgba(30, 42, 50, 0);
+  opacity: 0;
+  transition: opacity 0.3s var(--ease), background 0.3s var(--ease);
+}
+.ig-cell:hover .ig-cell__ov,
+.ig-cell:focus-visible .ig-cell__ov {
+  opacity: 1;
+  background: rgba(30, 42, 50, 0.35);
+}
+.ig-live {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+.ig-live iframe { width: 100%; border: 0; }
+.ig__cta { text-align: center; margin-top: clamp(1.6rem, 4vw, 2.4rem); }
+
+/* ---------- Delivery / Para llevar ---------- */
+.pickup {
+  padding: clamp(3rem, 7vw, 5rem) var(--gutter);
+}
+.pickup__inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  background: var(--foam);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: clamp(2rem, 5vw, 3.2rem);
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
+}
+.pickup__text .script { font-size: 1.8rem; color: var(--terracotta); }
+.pickup__text h2 { font-size: clamp(1.7rem, 4vw, 2.4rem); margin: 0.2rem 0 0.7rem; }
+.pickup__text p { color: var(--ink-soft); margin: 0; max-width: 46ch; }
+.pickup__actions { display: flex; flex-direction: column; gap: 1rem; align-items: flex-start; }
+.pickup__apps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.pickup__apps li {
+  border: 1px dashed var(--ocean);
+  color: var(--ocean);
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  opacity: 0.75;
+}
+
+/* ---------- FAQ ---------- */
+.faq { padding: clamp(4rem, 9vw, 7rem) 0; }
+.faq__list {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+.faq__item {
+  border-bottom: 1px solid var(--border);
+}
+.faq__item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 1.15rem 2.2rem 1.15rem 0;
+  position: relative;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--ink);
+}
+.faq__item summary::-webkit-details-marker { display: none; }
+.faq__item summary::after {
+  content: "";
+  position: absolute;
+  right: 0.3rem;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  border-right: 2px solid var(--ocean);
+  border-bottom: 2px solid var(--ocean);
+  transform: translateY(-70%) rotate(45deg);
+  transition: transform 0.25s var(--ease);
+}
+.faq__item[open] summary::after { transform: translateY(-30%) rotate(-135deg); }
+.faq__item summary:focus-visible { outline: 2px solid var(--ocean); outline-offset: 3px; border-radius: 6px; }
+.faq__body { padding: 0 0 1.2rem; }
+.faq__body p { color: var(--ink-soft); margin: 0 0 0.6rem; }
+.faq__body .link-underline { color: var(--terracotta-deep); font-weight: 600; }
+
+/* ---------- Modal reserva ---------- */
+.resv {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.resv[hidden] { display: none; }
+.resv__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(16, 32, 40, 0.55);
+  backdrop-filter: blur(3px);
+}
+.resv__card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 540px;
+  max-height: 92vh;
+  overflow-y: auto;
+  background: var(--paper-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.6rem, 4vw, 2.6rem);
+  box-shadow: 0 40px 80px -30px rgba(16, 32, 40, 0.5);
+  animation: resv-in 0.28s var(--ease);
+}
+@keyframes resv-in {
+  from { opacity: 0; transform: translateY(16px) scale(0.98); }
+  to   { opacity: 1; transform: none; }
+}
+.resv__title { font-size: clamp(1.7rem, 4vw, 2.2rem); margin: 0.1rem 0 0.5rem; }
+.resv__intro { color: var(--ink-soft); margin: 0 0 1.4rem; }
+.resv__close {
+  position: absolute;
+  top: 0.9rem;
+  right: 0.9rem;
+  background: transparent;
+  border: none;
+  color: var(--ink);
+  cursor: pointer;
+  padding: 0.3rem;
+  border-radius: 50%;
+  line-height: 0;
+}
+.resv__close:hover { background: var(--sand); }
+.resv__form { display: flex; flex-direction: column; gap: 1rem; }
+.resv__row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.resv__field { display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.9rem; font-weight: 600; color: var(--ink); }
+.resv__field em { font-weight: 400; color: var(--ink-soft); font-style: normal; }
+.resv__field input,
+.resv__field select {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.7em 0.85em;
+  width: 100%;
+}
+.resv__field input:focus,
+.resv__field select:focus {
+  outline: 2px solid var(--ocean);
+  outline-offset: 1px;
+  border-color: var(--ocean);
+}
+.resv__submit { justify-content: center; margin-top: 0.3rem; }
+.resv__note { font-size: 0.82rem; color: var(--ink-soft); text-align: center; margin: 0.2rem 0 0; }
+
+/* ---------- Responsive (añadidos) ---------- */
+@media (max-width: 900px) {
+  .carta__grid { grid-template-columns: 1fr; }
+  .pickup__inner { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .ig-grid { gap: 6px; }
+  .resv__row { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .resv__card { animation: none; }
+  .ig-cell img { transition: none; }
+  .faq__item summary::after { transition: none; }
+}
